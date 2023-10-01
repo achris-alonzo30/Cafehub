@@ -1,0 +1,430 @@
+/* Start Index CSS */
+/* Global styles */
+* {
+  font-size: 16px; /* Set the root font size to a reasonable value */
+}
+
+.lato-font {
+  font-family: 'Lato', sans-serif;
+}
+
+.abril-font {
+  font-family: 'Abril Fatface';
+}
+
+/* Header styles */
+.hub-text {
+  color: #D6860D;
+  font-size: 1em;
+}
+
+.website-name-font-size {
+  font-weight: 500;
+  color: white;
+}
+
+.slogan-font-size {
+  color: white;
+  letter-spacing: 2px;
+}
+
+.explore-button {
+  background-color: rgba(217, 217, 217, 0.5);
+  color: white;
+  transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+.explore-button:hover {
+  background-color: #D6860D; /* Change background color on hover */
+  color: white;
+}
+
+.carousel-item {
+  height: 100vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
+.index-container {
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 20vh;
+}
+
+.background-image-overlay {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* Responsive font sizes */
+/* For smaller screens */
+@media (max-width: 576px) {
+  .website-name-font-size {
+    font-size: 5em; /* Equivalent to 80px (5 * 16px) */
+  }
+
+  .slogan-font-size {
+    font-size: 1.5em; /* Equivalent to 24px (1.5 * 16px) */
+    letter-spacing: 1px; /* Equivalent to 1px (0.0625 * 16px) */
+  }
+
+}
+
+/* For medium screens */
+@media (min-width: 576px) and (max-width: 767px) {
+  .website-name-font-size {
+    font-size: 6em; /* Equivalent to 96px (6 * 16px) */
+  }
+
+  .slogan-font-size {
+    font-size: 2em; /* Equivalent to 32px (2 * 16px) */
+    letter-spacing: 1.5px; /* Equivalent to 1.5px (0.09375 * 16px) */
+  }
+
+}
+
+/* For large screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .website-name-font-size {
+    font-size: 6.5em; /* Equivalent to 104px (6.5 * 16px) */
+  }
+
+  .slogan-font-size {
+    font-size: 2.25em; /* Equivalent to 36px (2.25 * 16px) */
+    letter-spacing: 1.75px; /* Equivalent to 1.75px (0.109375 * 16px) */
+  }
+
+}
+
+/* For extra-large screens */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .website-name-font-size {
+    font-size: 7em; /* Equivalent to 112px (7 * 16px) */
+  }
+
+  .slogan-font-size {
+    font-size: 2.5em; /* Equivalent to 40px (2.5 * 16px) */
+    letter-spacing: 2px; /* Equivalent to 2px (0.125 * 16px) */
+  }
+
+}
+
+/* For 2x extra-large screens and above */
+@media (min-width: 1200px) {
+  .website-name-font-size {
+    font-size: 7.5em; /* Equivalent to 120px (7.5 * 16px) */
+  }
+
+  .slogan-font-size {
+    font-size: 2.5em; /* Equivalent to 40px (2.5 * 16px) */
+    letter-spacing: 2px; /* Equivalent to 2px (0.125 * 16px) */
+  }
+
+}
+/* End Index CSS */
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* Start Cafes CSS */
+/* General layout */
+.left-box {
+  width: 50%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.left-box img {
+    position: absolute;
+    width: 100%;
+}
+
+.sticky-left {
+  position: fixed;
+  top: 0;
+}
+
+.cafes-container {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  right: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.right-box {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* Filter styles */
+.filter-top-rect-box {
+  height: 50px;
+  border: 3px solid #d9d9d9;
+  text-align: center;
+  position: relative;
+}
+
+.top-rect-box {
+  height: 100px;
+  border: 3px solid #d9d9d9;
+  text-align: center;
+  position: relative;
+}
+
+.filter-heading {
+  font-size: 20px;
+  color: #424242;
+  position: absolute;
+  left: 5%;
+  white-space: nowrap;
+}
+
+.input-group {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dropdown-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.dropdown-menu {
+  width: max-content;
+  padding: 5px;
+}
+
+.input-group input {
+  background-color: rgba(217, 217, 217, 0.5);
+}
+
+/* Cafes listing styles */
+.cafes-heading {
+  font-size: 42px;
+  color: #424242;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.bottom-rect-box {
+  height: 235px;
+  width: 100%;
+  margin-top: 10px;
+  border: 3px solid #d9d9d9;
+  position: relative;
+}
+
+.image-container-border {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #424242;
+  width: 35%;
+  height: 70%;
+  padding: 5px;
+}
+
+
+.image-container-border img {
+  width: 100%;
+  height: 100%;
+}
+
+.text-container {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  white-space: nowrap;
+  color: #424242;
+  justify-content: left;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the value to control the spacing */
+}
+
+.text-container h1 {
+  font-size: 1.5em;
+}
+
+.text-container a {
+  text-decoration: none;
+  color: #D6860D;
+}
+
+/* Cafes buttons */
+.cafes-button-container {
+  display: flex;
+  gap: 1px;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.search-button,
+.cafes-button {
+  background-color: rgba(217, 217, 217, 0.5);
+  color: white;
+  transition: background-color 0.3s;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cafes-button {
+  height: 50px;
+  width: 100%;
+  color: #d9d9d9;
+}
+
+.cafes-button:hover,
+.search-button:hover {
+  background-color: #D6860D;
+  color: white;
+}
+
+/* Cafes button tooltip */
+.cafes-button[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  transform: translateX(0%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+}
+
+.cafes-button:hover[data-tooltip]::after {
+  opacity: 1;
+}
+/* End Cafes CSS */
+
+/* Start Add Cafes CSS */
+/* Forms layout */
+.forms-rect-box {
+  margin-top: 10px;
+  border: 3px solid #d9d9d9;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.forms-container {
+  position: absolute;
+  text-align: center;
+  width: 80%;
+}
+
+.forms-container button:hover {
+  background-color: #424242;
+  color: white;
+}
+
+.form-control {
+  background-color: rgba(217, 217, 217, 0.5);
+}
+.forms-container h2,
+form {
+  color: #424242;
+}
+
+/* Form input styles */
+form input[type="text"],
+form input[type="time"] {
+  background-color: rgba(217, 217, 217, 0.5);
+  border: 1px solid #d9d9d9;
+  padding: 5px;
+}
+
+form input[type="time"] {
+  background-color: rgba(217, 217, 217, 0.5);
+  color: #424242;
+}
+
+form.form-container select {
+  background-color: rgba(217, 217, 217, 0.5);
+  border: 1px solid #d9d9d9;
+  padding: 5px;
+}
+
+.submit-button {
+  color: white;
+  background-color: #D6860D;
+}
+/* End Add Cafes CSS */
+
+@media screen and (max-width: 785px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .left-box {
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .left-box img{
+    height: 100%;
+  }
+
+  .left-box h1{
+    font-size: 50px;
+  }
+
+  .left-box p{
+    font-size: 20px;
+  }
+
+  .cafes-button-container {
+    width: 100%;
+    min-height: 50vh;
+    bottom: 0;
+
+  }
+
+  .right-box {
+    top: 0;
+  }
+
+  .forms-container {
+    position: relative; /* Change position to relative */
+    width: 100%; /* Adjust width to take up the full width of the screen */
+    padding: 0 10px; /* Optional: Add some padding to the sides */
+  }
+}

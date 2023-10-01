@@ -1,0 +1,52 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends 'base.html' %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Left Box -->
+        <div class="col left-box" id="leftBox">
+            <img src="static/images/half-4.png " alt="">
+            <div class="cafes-container">
+                <h1 class="abril-font website-name-font-size">Caƒe <span class="hub-text">Hub</span></h1>
+                <p class="lato-font slogan-font-size">Document the very best Caƒe Hub.</p>
+            </div>
+            {% include "navbar.html" %}
+        </div>
+
+        <!-- Right Box -->
+        <div class="col right-box">
+            <!-- Top Rectangular Box -->
+            <div class="top-rect-box bg-light">
+                <h1 class="abril-font cafes-heading">Join The Community</h1>
+            </div>
+
+            <div class="forms-rect-box bg-light">
+                <div class="forms-container">
+                    <h2 class="lato-font">Subscribe to our community and help others find their perfect coffee sanctuary.</h2>
+                    <form action="" method="POST" role="form">
+                      {{ form.hidden_tag() }}
+                      {{ wtf.form_errors(form, hiddens="only") }}
+
+                      {{ wtf.form_field(form.fname) }}
+                      {{ wtf.form_field(form.lname) }}
+                      {{ wtf.form_field(form.email) }}
+                      {{ wtf.form_field(form.favourite_location) }}
+
+                      <button class="btn btn-lg submit-button mt-4" type="submit">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

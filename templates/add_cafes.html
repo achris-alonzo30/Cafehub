@@ -1,0 +1,95 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends 'base.html' %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <!-- Left Box -->
+        <div class="col left-box" id="leftBox">
+            <img src="static/images/half-3.png" alt="">
+            <div class="cafes-container">
+                <h1 class="abril-font website-name-font-size">Caƒe <span class="hub-text">Hub</span></h1>
+                <p class="lato-font slogan-font-size">Document the very best Caƒe Hub.</p>
+            </div>
+            {% include "navbar.html" %}
+        </div>
+
+        <!-- Right Box -->
+        <div class="col right-box">
+            <!-- Top Rectangular Box -->
+            <div class="top-rect-box bg-light">
+                <h1 class="abril-font cafes-heading">Add New Place</h1>
+            </div>
+
+            <div class="forms-rect-box bg-light">
+                <div class="forms-container">
+                    <h2 class="lato-font">Discover, connect, and share your go-to coffee spots with the community.</h2>
+                    <form action="{{ url_for('add_cafes') }}" method="POST" role="form" class="form-container" enctype="multipart/form-data">
+                      {{ form.hidden_tag() }}
+                      {{ wtf.form_errors(form, hiddens="only") }}
+                      <hr>
+                        <p>Upload Cafe Image:</p>
+                          <input type="file" name="cafe_image" class="form-control" id="inputGroupFile02">
+                      <hr>
+                      <h2><b>Basic Information: </b></h2>
+                      {{ wtf.form_field(form.cafe) }}
+                      {{ wtf.form_field(form.location) }}
+                      {{ wtf.form_field(form.website_url) }}
+                      {{ wtf.form_field(form.open_time) }}
+                      {{ wtf.form_field(form.closing_time) }}
+                      <br>
+                      <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="openOnWeekendCheckbox" value="option1">
+                            <label class="form-check-label">Open on Weekend too?</label>
+                      </div>
+                      <!-- Weekend Opening Hours -->
+                      <br>
+                      <div id="weekendHoursForm" style="display:none;">
+                            {{ wtf.form_field(form.open_time_saturday) }}
+                            {{ wtf.form_field(form.closing_time_saturday) }}
+                            {{ wtf.form_field(form.open_time_sunday) }}
+                            {{ wtf.form_field(form.closing_time_sunday) }}
+                      </div>
+                      <br>
+                      <h2><b>Ratings: </b></h2>
+                      {{ wtf.form_field(form.coffee_rating) }}
+                      {{ wtf.form_field(form.food_rating) }}
+                      {{ wtf.form_field(form.wifi_rating) }}
+                      {{ wtf.form_field(form.power_outlet_rating) }}
+                      <br>
+                      <h2><b>Cafe Features: </b></h2>
+                      {{ wtf.form_field(form.tier_prices) }}
+                      {{ wtf.form_field(form.number_of_tables) }}
+                      {{ wtf.form_field(form.the_vibe) }}
+                      {{ wtf.form_field(form.quietness) }}
+                      {{ wtf.form_field(form.restroom) }}
+
+                      <button class="btn btn-lg submit-button mt-4 mb-3" type="submit">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const openOnWeekendCheckbox = document.getElementById("openOnWeekendCheckbox");
+const weekendHoursForm = document.getElementById("weekendHoursForm");
+
+openOnWeekendCheckbox.addEventListener("change", function () {
+    if (openOnWeekendCheckbox.checked) {
+        weekendHoursForm.style.display = "block";
+    } else {
+        weekendHoursForm.style.display = "none";
+    }
+});
+</script>
+{% endblock %}
